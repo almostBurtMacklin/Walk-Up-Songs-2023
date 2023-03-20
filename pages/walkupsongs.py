@@ -86,9 +86,9 @@ def update_lneup_stack(n):
                     dmc.Group(
                         #style = {'justify-content':'space-between'}
                         children = [
-                            dmc.Button('Song 1', style = {'background-color':navy}, id = {'type':'song','index':f'0-{player}'}),
-                            dmc.Button('Song 2', style = {'background-color':navy}, id = {'type':'song','index':f'1-{player}'}),
-                            dmc.Button('Song 3', style = {'background-color':navy}, id = {'type':'song','index':f'2-{player}'}),
+                            dmc.Button('Song 1', style = {'background-color':df.query('name ==@player')['color'].iloc[0]}, id = {'type':'song','index':f'0-{player}'}),
+                            dmc.Button('Song 2', style = {'background-color':df.query('name ==@player')['color'].iloc[1]}, id = {'type':'song','index':f'1-{player}'}),
+                            dmc.Button('Song 3', style = {'background-color':df.query('name ==@player')['color'].iloc[2]}, id = {'type':'song','index':f'2-{player}'}),
                         ]
                     )            
                 ]
@@ -200,6 +200,21 @@ def update_color(n, color):
 
     if ctx.triggered_id is not None:
         if color == {'background-color':navy}:
+            
+            loca = int(ctx.triggered_id['index'].split('-')[0])
+            playa = ctx.triggered_id['index'].split('-')[1]
+            
+            
+            df = pd.read_csv('button_maker.csv')
+            song_name = df.query('name == @playa')['song'].iloc[loca]
+            print(song_name)
+            df.loc[df['song'] == song_name, 'color'] = grey
+            
+            
+            print(df)
+            df.to_csv('button_maker.csv', index=False)
+            #print(ctx.triggered_id)
+            
             return {'background-color':grey}
         else:
             return {'background-color':navy}

@@ -444,6 +444,8 @@ def display_content(pathname):
         return pages.lineup.layout  
     elif page_name == 'walkup_songs':
         return pages.walkupsongs.layout
+    elif page_name =='other_songs':
+        return pages.other_songs.layout
 
 
 

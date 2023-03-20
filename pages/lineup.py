@@ -175,7 +175,9 @@ def updtae_buttons(sub,ed, n):
 
         df1 = pd.merge(df, pd.read_csv('song_names.csv'), how  = 'left')
         
-        df1.to_csv('button_maker.csv')
+        df1['color'] = '#00244a'
+        
+        df1.to_csv('button_maker.csv', index = False)
         #print(df)
 
         return  [True, True, True, True, True, True, True, True, True], True
