@@ -25,3 +25,19 @@
     font-family: IntegralCF-RegularOblique;
  
 }
+
+a.navLinks{
+    color:white;
+    font-family: IntegralCF-Regular;
+    font-size: small;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+a.navLinks:hover{
+    color:#acafa6;
+    font-family: IntegralCF-Regular;
+    font-size: small;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
