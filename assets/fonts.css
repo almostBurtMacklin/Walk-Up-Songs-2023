@@ -41,3 +41,13 @@ a.navLinks:hover{
     letter-spacing: 1px;
     text-decoration: none;
 }
+
+.classic_button {
+    background-color: #00244a;
+    color: white;
+}
+
+.classic_button:hover {
+    background-color: #00244a;
+    color: #acafa6;
+}

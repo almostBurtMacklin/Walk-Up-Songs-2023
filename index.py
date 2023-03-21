@@ -10,6 +10,11 @@ import os
 import base64
 import pages
 
+df = pd.read_csv('button_maker.csv')
+df['color']  = '#00244a'
+
+df.to_csv('button_maker.csv')
+
 from app import app
 
 
@@ -446,8 +451,10 @@ def display_content(pathname):
         return pages.walkupsongs.layout
     elif page_name =='other_songs':
         return pages.other_songs.layout
+    elif page_name =='all_walkups':
+        return pages.all_walkups.layout
 
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host = '127.0.0.1', port = 8050)
+    app.run_server(debug=False, host = '127.0.0.1', port = 8050)
