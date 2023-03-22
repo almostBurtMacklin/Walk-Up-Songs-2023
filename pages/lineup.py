@@ -119,7 +119,7 @@ def initalize_dropdown(n):
                 grow = True,
                 children = [
                     #dmc.Badge(id={'type':'number', 'index':j}, color = 'gray', children = [' '], fullWidth=False),
-                    dmc.Select(data = [{'label':i, 'value':i} for i in listy], id = {'type':'lineup','index':j}, value = name, disabled=True),
+                    dmc.Select(data = [{'label':i, 'value':i} for i in listy], id = {'type':'lineup','index':j}, value = name, disabled=True, searchable=True),
                 ]
             )
         )

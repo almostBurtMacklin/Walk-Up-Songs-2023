@@ -125,7 +125,7 @@ app.layout = dmc.MantineProvider(
                                             children=[
                                                 dcc.Link(
                                                     dmc.ThemeIcon(
-                                                        html.Img(src= app.get_asset_url('panthers_logo.png'), style={'width':43}),
+                                                        html.Img(src= 'assets/panthers_logo.png', style={'width':43}),
                                                         radius='sm',
                                                         size=44,
                                                         variant="filled",
@@ -170,15 +170,16 @@ app.layout = dmc.MantineProvider(
                                             ]
                                         ),
                                         dmc.Group(
+                                            style = {'color':'white!important'},
                                             children = [
                                                 dmc.Divider(orientation='vertical'),
-                                                dcc.Link('Set Lineup', className='navLinks', href=app.get_relative_path('/lineup')),
+                                                dcc.Link('Set Lineup', className='navLinks', style = {'color':'white'}, href=app.get_relative_path('/lineup')),
                                                 dmc.Divider(orientation='vertical'),
-                                                dcc.Link('Pre/Post Game Songs', className='navLinks', href = app.get_relative_path('/other_songs')),
+                                                dcc.Link('Pre/Post Game Songs', className='navLinks', style = {'color':'white'}, href = app.get_relative_path('/other_songs')),
                                                 dmc.Divider(orientation='vertical'),
-                                                dcc.Link('Lineup Walk Up Songs', className='navLinks',  href = app.get_relative_path('/walkup_songs')),
+                                                dcc.Link('Lineup Walk Up Songs', className='navLinks', style = {'color':'white'}, href = app.get_relative_path('/walkup_songs')),
                                                 dmc.Divider(orientation='vertical'),
-                                                dcc.Link('All Walk Up Songs', className='navLinks',  href = app.get_relative_path('/all_walkups')),
+                                                dcc.Link('All Walk Up Songs', className='navLinks', style = {'color':'white'}, href = app.get_relative_path('/all_walkups')),
                                                 dmc.Divider(orientation='vertical'),
                                             ]
                                         )
