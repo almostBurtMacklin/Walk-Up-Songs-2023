@@ -9,7 +9,7 @@ import time
 import os
 import base64
 import pages
-
+print('open a web browser and go to http://127.0.0.1:8050/')
 df = pd.read_csv('button_maker.csv')
 df['color']  = '#00244a'
 
@@ -125,7 +125,7 @@ app.layout = dmc.MantineProvider(
                                             children=[
                                                 dcc.Link(
                                                     dmc.ThemeIcon(
-                                                        html.Img(src= '..\\assets\\panthers_logo.png', style={'width':43}),
+                                                        html.Img(src= app.get_asset_url('panthers_logo.png'), style={'width':43}),
                                                         radius='sm',
                                                         size=44,
                                                         variant="filled",
@@ -220,4 +220,4 @@ def display_content(pathname):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host = '127.0.0.1', port = 8050)
+    app.run_server(debug=False, host = '127.0.0.1', port = 8050)
