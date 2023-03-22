@@ -49,7 +49,13 @@ layout = html.Div(
                                 dmc.Button('Barker Walk Up (Lineups)', className = 'classic_button', id = {'type':'pre', 'index':9}),
                                 dmc.Button('Welcome To The Jungle', className = 'classic_button', id = {'type':'pre', 'index':10}),
                                 dmc.Button('Opposing Team Mound Visit', className = 'classic_button', id = {'type':'pre', 'index':11}),
+                                dmc.Button('Narco (Trumpets)', className = 'classic_button', id = {'type':'pre', 'index':12}),
+                                dmc.Button('Thunderstruck', className = 'classic_button', id = {'type':'pre', 'index':13}),
+                                dmc.Button('Start Me Up', className = 'classic_button', id = {'type':'pre', 'index':14}),
+                                dmc.Button('Seven Nation Army', className = 'classic_button', id = {'type':'pre', 'index':15}),
+                                dmc.Button('Enter Sandman', className = 'classic_button', id = {'type':'pre', 'index':16}),
                             ]
+                            
                         )
                     ]
                 )

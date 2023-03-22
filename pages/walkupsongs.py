@@ -115,13 +115,13 @@ def sound_selector(n):
 
     n_look = (int(intter) * 3) + int(button.split('-')[0])
 
-    print(n_look)
+    #print(n_look)
 
-    print('n_look index:', button.split('-')[-1])
+    #print('n_look index:', button.split('-')[-1])
 
 
 
-    print('n:' , n)
+    #print('n:' , n)
     # print('n_look calc:', n_look)
 
     
@@ -133,7 +133,7 @@ def sound_selector(n):
 
     if n[int(n_look)] is None:
 
-        print('field update')
+        #print('field update')
         #print(ctx.triggered_id, n[int(n_look)])
 
         #file_names = ['6LACK.wav','canyoufeelit7thinning.mp3','barker1.wav','cali.wav', 'dogs.wav']
@@ -176,14 +176,14 @@ def sound_selector(n):
         button = ctx.triggered_id['index']
         #print(button)
 
-        song = int(button.split('-')[0]) - 1
+        song = int(button.split('-')[0])
         names = button.split('-')[1]
         n_look = button.split('-')[-1]
 
-        #print(song, names)
+        #print(song)
 
         file_name = pd.read_csv('song_names.csv').query('name == @names').reset_index(drop = True)['song'].iloc[song]
-
+        #print(pd.read_csv('song_names.csv').query('name == @names').reset_index(drop = True)['song'])
         #print(file_name)
 
         sound_filename = 'songs/' +file_name # replace with your own .mp3 file
@@ -207,11 +207,11 @@ def update_color(n, color):
             
             df = pd.read_csv('button_maker.csv')
             song_name = df.query('name == @playa')['song'].iloc[loca]
-            print(song_name)
+            #print(song_name)
             df.loc[df['song'] == song_name, 'color'] = grey
             
             
-            print(df)
+            #print(df)
             df.to_csv('button_maker.csv', index=False)
             #print(ctx.triggered_id)
             
